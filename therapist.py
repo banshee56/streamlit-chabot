@@ -1,6 +1,8 @@
 import openai
 import streamlit as st
 
+openai.api_key=st.secrets.get("OPEN_API_KEY")
+
 def generate_response(myprompt):
     response = openai.Completion.create(
         engine="text-davinci-003",
